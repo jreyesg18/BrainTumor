@@ -1,0 +1,74 @@
+<!-- app/views/patients/_form.html.erb -->
+
+<%= form_with(model: patient, local: true) do |form| %>
+  <% if patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+        <% patient.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :patient_id %>
+    <%= form.number_field :patient_id, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tumor_type %>
+    <%= form.text_field :tumor_type, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tumor_grade %>
+    <%= form.text_field :tumor_grade, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tumor_location %>
+    <%= form.text_field :tumor_location, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :treatment %>
+    <%= form.text_field :treatment, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :treatment_outcome %>
+    <%= form.text_field :treatment_outcome, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_to_recurrence %>
+    <%= form.number_field :time_to_recurrence, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recurrence_site %>
+    <%= form.text_field :recurrence_site, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :survival_time %>
+    <%= form.number_field :survival_time, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Guardar', class: 'btn btn-primary' %>
+  </div>
+<% end %>

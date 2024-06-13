@@ -1,0 +1,7 @@
+<!-- app/views/patients/edit.html.erb -->
+
+<h1>Editar Paciente</h1>
+
+<%= render 'form', patient: @patient %>
+
+<%= link_to 'Cancelar', patient_path(@patient), class: 'btn btn-secondary' %>

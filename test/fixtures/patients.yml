@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: 1
+  age: 1
+  gender: MyString
+  tumor_type: MyString
+  tumor_grade: MyString
+  tumor_location: MyString
+  treatment: MyString
+  treatment_outcome: MyString
+  time_to_recurrence: 1
+  recurrence_site: MyString
+  survival_time: 1
+
+two:
+  patient_id: 1
+  age: 1
+  gender: MyString
+  tumor_type: MyString
+  tumor_grade: MyString
+  tumor_location: MyString
+  treatment: MyString
+  treatment_outcome: MyString
+  time_to_recurrence: 1
+  recurrence_site: MyString
+  survival_time: 1
