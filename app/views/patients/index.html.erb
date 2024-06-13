@@ -1,32 +1,54 @@
-<!-- app/views/patients/index.html.erb -->
 
-<h1>Listado de Pacientes</h1>
-
-<table>
+<div class="container mt-4 mb-4">
+<table class="blueTable">
   <thead>
   <tr>
-    <th>Patient ID</th>
-    <th>Age</th>
-    <th>Gender</th>
-    <th>Tumor Type</th>
-    <th>Actions</th>
+    <th class="text-center">Patient ID</th>
+    <th class="text-center">Age</th>
+    <th class="text-center">Gender</th>
+    <th class="text-center">Tumor Type</th>
+    <th class="text-center">Tumor Grade</th>
+    <th class="text-center">Tumor Location</th>
+    <th class="text-center">Treatment</th>
+    <th class="text-center">Treatment Outcome</th>
+    <th class="text-center">Time to Recurrence (month)</th>
+    <th class="text-center">Recurrence Site</th>
+    <th class="text-center">Survival Time (month)</th>
+    <th class="text-center">Show</th>
+    <th class="text-center" colspan="3"></th>
   </tr>
   </thead>
+
   <tbody>
   <% @patients.each do |patient| %>
     <tr>
-      <td><%= patient.patient_id %></td>
-      <td><%= patient.age %></td>
-      <td><%= patient.gender %></td>
-      <td><%= patient.tumor_type %></td>
-      <td>
-        <%= link_to 'Ver', patient_path(patient), class: 'btn btn-primary' %>
-        <%= link_to 'Editar', edit_patient_path(patient), class: 'btn btn-secondary' %>
-        <%= link_to 'Eliminar', patient_path(patient), method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-danger' %>
-      </td>
+      <td class="text-center"><%= patient.patient_id %></td>
+      <td class="text-center"><%= patient.age %></td>
+      <td class="text-center"><%= patient.gender %></td>
+      <td class="text-center"><%= patient.tumor_type %></td>
+      <td class="text-center"><%= patient.tumor_grade %></td>
+      <td class="text-center"><%= patient.tumor_location %></td>
+      <td class="text-center"><%= patient.treatment %></td>
+      <td class="text-center"><%= patient.treatment_outcome %></td>
+      <td class="text-center"><%= patient.time_to_recurrence %></td>
+      <td class="text-center"><%= patient.recurrence_site %></td>
+      <td class="text-center"><%= patient.survival_time %></td>
+      <td class="text-center"><%= link_to 'Enter', patient %></td>
     </tr>
   <% end %>
   </tbody>
-</table>
 
-<%= link_to 'Agregar Nuevo Paciente', new_patient_path, class: 'btn btn-success' %>
+  <tfoot>
+  <tr>
+    <td colspan="11">
+      <div class="links">
+        <%= paginate @patients %>
+      </div>
+    </td>
+  </tr>
+  </tfoot>
+
+</table>
+</div>
+
+

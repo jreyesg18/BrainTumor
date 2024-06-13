@@ -1,10 +1,14 @@
-# app/controllers/patients_controller.rb
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
 
   # GET /patients
   def index
-    @patients = Patient.all
+
+    if params[:search].present?
+      @patients = Patient.search(params[:search]).page(params[:page]).per(10)
+    else
+      @patients = Patient.page(params[:page]).per(20)
+    end
   end
 
   # GET /patients/1
@@ -47,6 +51,7 @@ class PatientsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_patient
     @patient = Patient.find(params[:id])
