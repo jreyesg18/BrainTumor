@@ -1,19 +1,21 @@
 <!-- app/views/patients/show.html.erb -->
-<div class="container mt-4 mb-4">
-  <h1>Detalles del Paciente</h1>
+<div class="col-md-6 col-md-offset-3">
+  <div class="container mt-4 mb-4">
+    <h1>Detalles del Paciente</h1>
 
-  <p><strong>Patient ID:</strong> <%= @patient.patient_id %></p>
-  <p><strong>Age:</strong> <%= @patient.age %></p>
-  <p><strong>Gender:</strong> <%= @patient.gender %></p>
-  <p><strong>Tumor Type:</strong> <%= @patient.tumor_type %></p>
-  <p><strong>Tumor Grade:</strong> <%= @patient.tumor_grade %></p>
-  <p><strong>Tumor Location:</strong> <%= @patient.tumor_location %></p>
-  <p><strong>Treatment:</strong> <%= @patient.treatment %></p>
-  <p><strong>Treatment Outcome:</strong> <%= @patient.treatment_outcome %></p>
-  <p><strong>Time to Recurrence (months):</strong> <%= @patient.time_to_recurrence %></p>
-  <p><strong>Recurrence Site:</strong> <%= @patient.recurrence_site %></p>
-  <p><strong>Survival Time (months):</strong> <%= @patient.survival_time %></p>
+    <p><strong>Patient ID:</strong> <%= @patient.patient_id %></p>
+    <p><strong>Age:</strong> <%= @patient.age %></p>
+    <p><strong>Gender:</strong> <%= @patient.gender %></p>
+    <p><strong>Tumor Type:</strong> <%= @patient.tumor_type %></p>
+    <p><strong>Tumor Grade:</strong> <%= @patient.tumor_grade %></p>
+    <p><strong>Tumor Location:</strong> <%= @patient.tumor_location %></p>
+    <p><strong>Treatment:</strong> <%= @patient.treatment %></p>
+    <p><strong>Treatment Outcome:</strong> <%= @patient.treatment_outcome %></p>
+    <p><strong>Time to Recurrence (months):</strong> <%= @patient.time_to_recurrence %></p>
+    <p><strong>Recurrence Site:</strong> <%= @patient.recurrence_site %></p>
+    <p><strong>Survival Time (months):</strong> <%= @patient.survival_time %></p>
 
-  <%= link_to 'Volver al Listado', patients_path, class: 'btn btn-secondary' %>
+    <%= link_to 'Volver al Listado', patients_path, class: 'btn btn-secondary' %>
 
+  </div>
 </div>

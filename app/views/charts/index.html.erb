@@ -1,4 +1,5 @@
 <!-- app/views/charts/index.html.erb -->
+<div class="container mt-4 mb-4">
 <h1>Interactive Patient Data Chart</h1>
 
 <%= form_with url: charts_index_path, method: :get, local: true, id: "chartForm" do |form| %>
@@ -17,4 +18,6 @@
 
 <canvas id="patientChart" width="600" height="400"></canvas>
 
+
 <%= javascript_include_tag 'chart_options' %>
+</div>

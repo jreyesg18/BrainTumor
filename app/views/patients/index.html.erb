@@ -20,22 +20,22 @@
   </thead>
 
   <tbody>
-  <% @patients.each do |patient| %>
-    <tr>
-      <td class="text-center"><%= patient.patient_id %></td>
-      <td class="text-center"><%= patient.age %></td>
-      <td class="text-center"><%= patient.gender %></td>
-      <td class="text-center"><%= patient.tumor_type %></td>
-      <td class="text-center"><%= patient.tumor_grade %></td>
-      <td class="text-center"><%= patient.tumor_location %></td>
-      <td class="text-center"><%= patient.treatment %></td>
-      <td class="text-center"><%= patient.treatment_outcome %></td>
-      <td class="text-center"><%= patient.time_to_recurrence %></td>
-      <td class="text-center"><%= patient.recurrence_site %></td>
-      <td class="text-center"><%= patient.survival_time %></td>
-      <td class="text-center"><%= link_to 'Enter', patient %></td>
-    </tr>
-  <% end %>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td class="text-center"><%= patient.patient_id %></td>
+        <td class="text-center"><%= patient.age %></td>
+        <td class="text-center"><%= patient.gender %></td>
+        <td class="text-center"><%= patient.tumor_type %></td>
+        <td class="text-center"><%= patient.tumor_grade %></td>
+        <td class="text-center"><%= patient.tumor_location %></td>
+        <td class="text-center"><%= patient.treatment %></td>
+        <td class="text-center"><%= patient.treatment_outcome %></td>
+        <td class="text-center"><%= patient.time_to_recurrence %></td>
+        <td class="text-center"><%= patient.recurrence_site %></td>
+        <td class="text-center"><%= patient.survival_time %></td>
+        <td class="text-center"><%= link_to 'Enter', patient %></td>
+      </tr>
+    <% end %>
   </tbody>
 
   <tfoot>
@@ -44,12 +44,11 @@
       <div class="links">
         <%= paginate @patients %>
       </div>
+
+
     </td>
   </tr>
   </tfoot>
-
-
-
 </table>
 </div>
 
