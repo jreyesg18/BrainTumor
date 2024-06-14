@@ -14,7 +14,6 @@
     <th class="text-center">Time to Recurrence (month)</th>
     <th class="text-center">Recurrence Site</th>
     <th class="text-center">Survival Time (month)</th>
-    <th class="text-center">Show</th>
     <th class="text-center" colspan="3"></th>
   </tr>
   </thead>
@@ -33,7 +32,6 @@
         <td class="text-center"><%= patient.time_to_recurrence %></td>
         <td class="text-center"><%= patient.recurrence_site %></td>
         <td class="text-center"><%= patient.survival_time %></td>
-        <td class="text-center"><%= link_to 'Enter', patient %></td>
       </tr>
     <% end %>
   </tbody>
