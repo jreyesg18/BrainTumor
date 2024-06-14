@@ -1,0 +1,20 @@
+<!-- app/views/charts/index.html.erb -->
+<h1>Interactive Patient Data Chart</h1>
+
+<%= form_with url: charts_index_path, method: :get, local: true, id: "chartForm" do |form| %>
+  <div class="field">
+    <%= form.label :x_field, "Select X Axis Field" %>
+    <%= form.select :x_field, options_for_select(['age', 'gender', 'tumor_type', 'tumor_grade', 'tumor_location', 'treatment', 'treatment_outcome', 'time_to_recurrence', 'recurrence_site', 'survival_time'], params[:x_field]), {}, { id: 'xField' } %>
+  </div>
+  <div class="field">
+    <%= form.label :y_field, "Select Y Axis Field" %>
+    <%= form.select :y_field, options_for_select(['age', 'gender', 'tumor_type', 'tumor_grade', 'tumor_location', 'treatment', 'treatment_outcome', 'time_to_recurrence', 'recurrence_site', 'survival_time'], params[:y_field]), {}, { id: 'yField' } %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Generate Chart", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<canvas id="patientChart" width="600" height="400"></canvas>
+
+<%= javascript_include_tag 'chart_options' %>

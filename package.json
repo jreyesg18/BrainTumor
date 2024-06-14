@@ -1,5 +1,7 @@
 {
   "name": "braintumorapp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "chart.js": "^4.4.3"
+  }
 }
